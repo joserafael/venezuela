@@ -111,7 +111,7 @@ class CiudadesController extends AppController {
 		if (empty($this->data)) {
 			$this->data = $this->Ciudade->read(null, $id);
 		}
-		$parroquias = $this->Ciudade->Parroquium->find('list');
+		$parroquias = $this->Ciudade->Parroquia->find('list');
 		$municipios = $this->Ciudade->Municipio->find('list');
 		$estados = $this->Ciudade->Estado->find('list');
 		$this->set(compact('parroquias', 'municipios', 'estados'));

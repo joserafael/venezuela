@@ -40,11 +40,11 @@
 	<div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="/">Venezuela</a>
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="active"><a href="/estados">Estados</a></li>
+            <li><a href="/municipios">Municipios</a></li>
+            <li><a href="/parroquias">Parroquias</a></li>
           </ul>
           <form action="" class="pull-right">
             <input class="input-small" type="text" placeholder="Username">

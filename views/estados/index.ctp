@@ -4,7 +4,7 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
 			<th><?php echo $this->Paginator->sort('nombre');?></th>
-			<th class="actions"><?php __('Actions');?></th>
+			
 	</tr>
 	<?php
 	$i = 0;
@@ -16,12 +16,8 @@
 	?>
 	<tr<?php echo $class;?>>
 		<td><?php echo $estado['Estado']['id']; ?>&nbsp;</td>
-		<td><?php echo $estado['Estado']['nombre']; ?>&nbsp;</td>
-		<td class="actions">
-			<?php echo $this->Html->link(__('View', true), array('action' => 'view', $estado['Estado']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $estado['Estado']['id'])); ?>
-			<?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $estado['Estado']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $estado['Estado']['id'])); ?>
-		</td>
+		<td><?php echo $this->Html->link(__($estado['Estado']['nombre'], true), array('action' => 'view', $estado['Estado']['id'])); ?>&nbsp;</td>
+		
 	</tr>
 <?php endforeach; ?>
 	</table>
