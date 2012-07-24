@@ -42,15 +42,11 @@
         <div class="container">
           <a class="brand" href="/">Venezuela</a>
           <ul class="nav">
-            <li class="active"><a href="/estados">Estados</a></li>
-            <li><a href="/municipios">Municipios</a></li>
-            <li><a href="/parroquias">Parroquias</a></li>
+            <li class="active"><a href="/venezuela/estados">Estados</a></li>
+            <li><a href="/venezuela/municipios">Municipios</a></li>
+            <li><a href="/venezuela/parroquias">Parroquias</a></li>
           </ul>
-          <form action="" class="pull-right">
-            <input class="input-small" type="text" placeholder="Username">
-            <input class="input-small" type="password" placeholder="Password">
-            <button class="btn" type="submit">Sign in</button>
-          </form>
+         
         </div>
       </div>
     </div>

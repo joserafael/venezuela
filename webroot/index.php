@@ -50,7 +50,7 @@
  *
  */
 	if (!defined('CAKE_CORE_INCLUDE_PATH')) {
-		define('CAKE_CORE_INCLUDE_PATH',  DS . 'usr' . DS . 'share' . DS . 'php');
+		define('CAKE_CORE_INCLUDE_PATH',  DS . 'usr' . DS . 'share' . DS . 'php' . DS . 'cakephp' . DS . 'cake1');
 	}
 
 /**
