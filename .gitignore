@@ -1,2 +1,4 @@
 tmp/
 config/database.php
+.project
+.settings/
