@@ -25,7 +25,7 @@
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php __('CakePHP: the rapid development php framework:'); ?>
+		Venezuela :: 
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
@@ -42,15 +42,11 @@
         <div class="container">
           <a class="brand" href="/">Venezuela</a>
           <ul class="nav">
-            <li class="active"><a href="/estados">Estados</a></li>
-            <li><a href="/municipios">Municipios</a></li>
-            <li><a href="/parroquias">Parroquias</a></li>
+            <li class="active"><a href="/venezuela/estados">Estados</a></li>
+            <li><a href="/venezuela/municipios">Municipios</a></li>
+            <li><a href="/venezuela/parroquias">Parroquias</a></li>
           </ul>
-          <form action="" class="pull-right">
-            <input class="input-small" type="text" placeholder="Username">
-            <input class="input-small" type="password" placeholder="Password">
-            <button class="btn" type="submit">Sign in</button>
-          </form>
+         
         </div>
       </div>
     </div>
@@ -59,7 +55,7 @@
 
       <div class="content">
         <div class="page-header">
-          <h1>Page name <small>Supporting text or tagline</small></h1>
+          <h1>Venezuela <small>estados, municipios y parroquias</small></h1>
         </div>
         <div class="row">
           <div class="span10">
@@ -68,13 +64,13 @@
     <?php echo $content_for_layout; ?>
           </div>
           <div class="span4">
-            <h3>Secondary content</h3>
+            
           </div>
         </div>
       </div>
 
       <footer>
-        <p>&copy; Company 2011</p>
+        <p>&copy; 2012</p>
       </footer>
 
     </div> <!-- /container -->

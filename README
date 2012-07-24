@@ -63,7 +63,9 @@ CREATE TABLE IF NOT EXISTS `parroquias` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1119 ;
 
 
+NOTA: La tabla ciudades no está finalizada y un poco desordenada. ***ESTARÈ BASTANTE AGRADECIDO SI DESEA COLABORAR EN SU ORDEN **
 Si encuentra algún error o desea realizar una sugerencia puede contactarme de las siguientes maneras:
+
 
 En twitter: @joserafael
 En Facebook: http://www.facebook.com/josearafaelcamejo
