@@ -28,6 +28,7 @@
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('bootstrap');
+                echo $this->Html->css('estilos');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -36,10 +37,20 @@
 </head>
 <body>
 	
-		<div class="navbar navbar-static-top">
+		<div class="navbar navbar-fixed-top navbar-inverse">
                     <div class="navbar-inner">
                         <div class="container">
-			<h1><?php echo $this->Html->link(__('Venezuela'), 'http://www.joserafael.com'); ?></h1>
+                           <a href="/venezuela" class="brand"> Venezuela </a>
+                        
+                        
+                            <ul class="nav">
+    <li>
+    <a href="/venezuela/estados">Estados</a>
+    </li>
+    <li><a href="/venezuela/municipios">Municipios</a></li>
+    <li><a href="/venezuela/parroquias">Parroquias</a></li>
+    <li><a href="/venezuela/ciudades">Ciudades</a></li>
+    </ul>
 		</div>
                         </div>
                     </div>
