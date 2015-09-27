@@ -6,8 +6,8 @@ use Cake\ORM\Entity;
 /**
  * Ciudade Entity.
  *
- * @property int $id_ciudad
- * @property int $id_estado
+ * @property int $id
+ * @property int $estado_id
  * @property string $ciudad
  * @property bool $capital
  */

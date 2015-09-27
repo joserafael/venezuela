@@ -6,8 +6,8 @@ use Cake\ORM\Entity;
 /**
  * Municipio Entity.
  *
- * @property int $id_municipio
- * @property int $id_estado
+ * @property int $id
+ * @property int $estado_id
  * @property string $municipio
  */
 class Municipio extends Entity

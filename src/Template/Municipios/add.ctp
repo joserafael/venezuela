@@ -9,7 +9,8 @@
     <fieldset>
         <legend><?= __('Add Municipio') ?></legend>
         <?php
-            echo $this->Form->input('id_estado');
+            echo $this->Form->input('id');
+            echo $this->Form->input('estado_id');
             echo $this->Form->input('municipio');
         ?>
     </fieldset>

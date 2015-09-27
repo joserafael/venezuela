@@ -10,6 +10,8 @@ use Cake\Validation\Validator;
 /**
  * Estados Model
  *
+ * @property \Cake\ORM\Association\HasMany $Ciudades
+ * @property \Cake\ORM\Association\HasMany $Municipios
  */
 class EstadosTable extends Table
 {
@@ -25,9 +27,15 @@ class EstadosTable extends Table
         parent::initialize($config);
 
         $this->table('estados');
-        $this->displayField('id_estado');
+        $this->displayField('estado');
         $this->primaryKey('id_estado');
 
+        $this->hasMany('Ciudades', [
+            'foreignKey' => 'estado_id'
+        ]);
+        $this->hasMany('Municipios', [
+            'foreignKey' => 'estado_id'
+        ]);
     }
 
     /**
@@ -45,10 +53,6 @@ class EstadosTable extends Table
         $validator
             ->requirePresence('estado', 'create')
             ->notEmpty('estado');
-
-        $validator
-            ->requirePresence('iso_3166-2', 'create')
-            ->notEmpty('iso_3166-2');
 
         return $validator;
     }

@@ -15,12 +15,12 @@
             <td><?= h($ciudade->ciudad) ?></td>
         </tr>
         <tr>
-            <th><?= __('Id Ciudad') ?></th>
-            <td><?= $this->Number->format($ciudade->id_ciudad) ?></td>
+            <th><?= __('Id') ?></th>
+            <td><?= $this->Number->format($ciudade->id) ?></td>
         </tr>
         <tr>
-            <th><?= __('Id Estado') ?></th>
-            <td><?= $this->Number->format($ciudade->id_estado) ?></td>
+            <th><?= __('Estado Id') ?></th>
+            <td><?= $this->Number->format($ciudade->estado_id) ?></td>
         </tr>
         <tr>
             <th><?= __('Capital') ?></th>

@@ -16,7 +16,6 @@
         <legend><?= __('Edit Estado') ?></legend>
         <?php
             echo $this->Form->input('estado');
-            echo $this->Form->input('iso_3166-2');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

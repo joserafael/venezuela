@@ -15,12 +15,12 @@
             <td><?= h($parroquia->parroquia) ?></td>
         </tr>
         <tr>
-            <th><?= __('Id Parroquia') ?></th>
-            <td><?= $this->Number->format($parroquia->id_parroquia) ?></td>
+            <th><?= __('Id') ?></th>
+            <td><?= $this->Number->format($parroquia->id) ?></td>
         </tr>
         <tr>
-            <th><?= __('Id Municipio') ?></th>
-            <td><?= $this->Number->format($parroquia->id_municipio) ?></td>
+            <th><?= __('Municipio Id') ?></th>
+            <td><?= $this->Number->format($parroquia->municipio_id) ?></td>
         </tr>
     </table>
 </div>

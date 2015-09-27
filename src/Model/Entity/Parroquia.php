@@ -6,8 +6,8 @@ use Cake\ORM\Entity;
 /**
  * Parroquia Entity.
  *
- * @property int $id_parroquia
- * @property int $id_municipio
+ * @property int $id
+ * @property int $municipio_id
  * @property string $parroquia
  */
 class Parroquia extends Entity

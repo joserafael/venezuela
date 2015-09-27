@@ -10,6 +10,8 @@ use Cake\Validation\Validator;
 /**
  * Municipios Model
  *
+ * @property \Cake\ORM\Association\BelongsTo $Estados
+ * @property \Cake\ORM\Association\HasMany $Parroquias
  */
 class MunicipiosTable extends Table
 {
@@ -28,6 +30,13 @@ class MunicipiosTable extends Table
         $this->displayField('id_municipio');
         $this->primaryKey('id_municipio');
 
+        $this->belongsTo('Estados', [
+            'foreignKey' => 'estado_id',
+            'joinType' => 'INNER'
+        ]);
+        $this->hasMany('Parroquias', [
+            'foreignKey' => 'municipio_id'
+        ]);
     }
 
     /**
@@ -39,18 +48,26 @@ class MunicipiosTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->add('id_municipio', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('id_municipio', 'create');
-
-        $validator
-            ->add('id_estado', 'valid', ['rule' => 'numeric'])
-            ->requirePresence('id_estado', 'create')
-            ->notEmpty('id_estado');
+            ->add('id', 'valid', ['rule' => 'numeric'])
+            ->allowEmpty('id', 'create');
 
         $validator
             ->requirePresence('municipio', 'create')
             ->notEmpty('municipio');
 
         return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules)
+    {
+        $rules->add($rules->existsIn(['estado_id'], 'Estados'));
+        return $rules;
     }
 }

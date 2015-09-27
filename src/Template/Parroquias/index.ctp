@@ -9,8 +9,8 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th><?= $this->Paginator->sort('id_parroquia') ?></th>
-                <th><?= $this->Paginator->sort('id_municipio') ?></th>
+                <th><?= $this->Paginator->sort('id') ?></th>
+                <th><?= $this->Paginator->sort('municipio_id') ?></th>
                 <th><?= $this->Paginator->sort('parroquia') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -18,8 +18,8 @@
         <tbody>
             <?php foreach ($parroquias as $parroquia): ?>
             <tr>
-                <td><?= $this->Number->format($parroquia->id_parroquia) ?></td>
-                <td><?= $this->Number->format($parroquia->id_municipio) ?></td>
+                <td><?= $this->Number->format($parroquia->id) ?></td>
+                <td><?= $this->Number->format($parroquia->municipio_id) ?></td>
                 <td><?= h($parroquia->parroquia) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $parroquia->id_parroquia]) ?>

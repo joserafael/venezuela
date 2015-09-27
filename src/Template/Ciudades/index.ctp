@@ -9,8 +9,8 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th><?= $this->Paginator->sort('id_ciudad') ?></th>
-                <th><?= $this->Paginator->sort('id_estado') ?></th>
+                <th><?= $this->Paginator->sort('id') ?></th>
+                <th><?= $this->Paginator->sort('estado_id') ?></th>
                 <th><?= $this->Paginator->sort('ciudad') ?></th>
                 <th><?= $this->Paginator->sort('capital') ?></th>
                 <th class="actions"><?= __('Actions') ?></th>
@@ -19,8 +19,8 @@
         <tbody>
             <?php foreach ($ciudades as $ciudade): ?>
             <tr>
-                <td><?= $this->Number->format($ciudade->id_ciudad) ?></td>
-                <td><?= $this->Number->format($ciudade->id_estado) ?></td>
+                <td><?= $this->Number->format($ciudade->id) ?></td>
+                <td><?= $this->Number->format($ciudade->estado_id) ?></td>
                 <td><?= h($ciudade->ciudad) ?></td>
                 <td><?= h($ciudade->capital) ?></td>
                 <td class="actions">

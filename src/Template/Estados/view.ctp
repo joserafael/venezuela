@@ -8,15 +8,11 @@
     </ul>
 </nav>
 <div class="estados view large-9 medium-8 columns content">
-    <h3><?= h($estado->id_estado) ?></h3>
+    <h3><?= h($estado->estado) ?></h3>
     <table class="vertical-table">
         <tr>
             <th><?= __('Estado') ?></th>
             <td><?= h($estado->estado) ?></td>
-        </tr>
-        <tr>
-            <th><?= __('Iso 3166-2') ?></th>
-            <td><?= h($estado->iso_3166-2) ?></td>
         </tr>
         <tr>
             <th><?= __('Id Estado') ?></th>

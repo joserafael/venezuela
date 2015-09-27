@@ -9,7 +9,8 @@
     <fieldset>
         <legend><?= __('Add Parroquia') ?></legend>
         <?php
-            echo $this->Form->input('id_municipio');
+            echo $this->Form->input('id');
+            echo $this->Form->input('municipio_id');
             echo $this->Form->input('parroquia');
         ?>
     </fieldset>

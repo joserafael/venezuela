@@ -10,6 +10,7 @@ use Cake\Validation\Validator;
 /**
  * Parroquias Model
  *
+ * @property \Cake\ORM\Association\BelongsTo $Municipios
  */
 class ParroquiasTable extends Table
 {
@@ -28,6 +29,10 @@ class ParroquiasTable extends Table
         $this->displayField('id_parroquia');
         $this->primaryKey('id_parroquia');
 
+        $this->belongsTo('Municipios', [
+            'foreignKey' => 'municipio_id',
+            'joinType' => 'INNER'
+        ]);
     }
 
     /**
@@ -39,18 +44,26 @@ class ParroquiasTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->add('id_parroquia', 'valid', ['rule' => 'numeric'])
-            ->allowEmpty('id_parroquia', 'create');
-
-        $validator
-            ->add('id_municipio', 'valid', ['rule' => 'numeric'])
-            ->requirePresence('id_municipio', 'create')
-            ->notEmpty('id_municipio');
+            ->add('id', 'valid', ['rule' => 'numeric'])
+            ->allowEmpty('id', 'create');
 
         $validator
             ->requirePresence('parroquia', 'create')
             ->notEmpty('parroquia');
 
         return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules)
+    {
+        $rules->add($rules->existsIn(['municipio_id'], 'Municipios'));
+        return $rules;
     }
 }

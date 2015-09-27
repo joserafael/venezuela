@@ -9,7 +9,8 @@
     <fieldset>
         <legend><?= __('Add Ciudade') ?></legend>
         <?php
-            echo $this->Form->input('id_estado');
+            echo $this->Form->input('id');
+            echo $this->Form->input('estado_id');
             echo $this->Form->input('ciudad');
             echo $this->Form->input('capital');
         ?>

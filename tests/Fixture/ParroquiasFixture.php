@@ -17,15 +17,15 @@ class ParroquiasFixture extends TestFixture
      */
     // @codingStandardsIgnoreStart
     public $fields = [
-        'id_parroquia' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-        'id_municipio' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
+        'municipio_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'parroquia' => ['type' => 'string', 'length' => 250, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
         '_indexes' => [
-            'id_municipio' => ['type' => 'index', 'columns' => ['id_municipio'], 'length' => []],
+            'fk_parroquias_1_idx' => ['type' => 'index', 'columns' => ['municipio_id'], 'length' => []],
         ],
         '_constraints' => [
-            'primary' => ['type' => 'primary', 'columns' => ['id_parroquia'], 'length' => []],
-            'parroquias_ibfk_1' => ['type' => 'foreign', 'columns' => ['id_municipio'], 'references' => ['municipios', 'id_municipio'], 'update' => 'cascade', 'delete' => 'cascade', 'length' => []],
+            'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
+            'fk_parroquias_1' => ['type' => 'foreign', 'columns' => ['municipio_id'], 'references' => ['municipios', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -41,8 +41,8 @@ class ParroquiasFixture extends TestFixture
      */
     public $records = [
         [
-            'id_parroquia' => 1,
-            'id_municipio' => 1,
+            'id' => 1,
+            'municipio_id' => 1,
             'parroquia' => 'Lorem ipsum dolor sit amet'
         ],
     ];

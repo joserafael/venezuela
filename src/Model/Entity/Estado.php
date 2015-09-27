@@ -8,7 +8,6 @@ use Cake\ORM\Entity;
  *
  * @property int $id_estado
  * @property string $estado
- * @property string $iso_3166-2
  */
 class Estado extends Entity
 {

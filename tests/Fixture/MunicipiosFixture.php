@@ -17,15 +17,15 @@ class MunicipiosFixture extends TestFixture
      */
     // @codingStandardsIgnoreStart
     public $fields = [
-        'id_municipio' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-        'id_estado' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
+        'estado_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'municipio' => ['type' => 'string', 'length' => 100, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
         '_indexes' => [
-            'id_estado' => ['type' => 'index', 'columns' => ['id_estado'], 'length' => []],
+            'fk_municipios_1_idx' => ['type' => 'index', 'columns' => ['estado_id'], 'length' => []],
         ],
         '_constraints' => [
-            'primary' => ['type' => 'primary', 'columns' => ['id_municipio'], 'length' => []],
-            'municipios_ibfk_1' => ['type' => 'foreign', 'columns' => ['id_estado'], 'references' => ['estados', 'id_estado'], 'update' => 'cascade', 'delete' => 'cascade', 'length' => []],
+            'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
+            'fk_municipios_1' => ['type' => 'foreign', 'columns' => ['estado_id'], 'references' => ['estados', 'id_estado'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -41,8 +41,8 @@ class MunicipiosFixture extends TestFixture
      */
     public $records = [
         [
-            'id_municipio' => 1,
-            'id_estado' => 1,
+            'id' => 1,
+            'estado_id' => 1,
             'municipio' => 'Lorem ipsum dolor sit amet'
         ],
     ];
