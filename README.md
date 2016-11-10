@@ -13,4 +13,4 @@ En twitter: @joserafael
 
 En mi blog: http://www.joserafael.com.ve/blog/acerca-de/
 
-Gracias por la atención. :-)
+Gracias por la atención. 
